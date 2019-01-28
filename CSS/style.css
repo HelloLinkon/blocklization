@@ -1,0 +1,517 @@
+:root {
+  --main-bg-color: black;
+  --theme-color: #7656b6;
+  --font-color: white;
+  --btn-color: #7d5bbf;
+
+  --margin: 5vh;
+  --padding: 2vh;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: var(--main-bg-color);
+  font-size: 16px;
+  color: white;
+}
+
+.fp-controlArrow{
+  display: none;
+}
+
+/* ############################# */
+/* annimation */
+/* ############################# */
+
+@keyframes blink {
+  0%   {transform: translateX(-20px);}
+  25%   {transform: translateX(20px);}
+  50%   {transform: translateX(-20px);}
+  75%   {transform: translateX(20px);}
+  100%   {transform: translateX(-20px);}
+
+}
+
+@keyframes jump {
+  0%   {transform: translateY(10%) scale(0.2);}
+  25%   {transform: translateY(20%) scale(0.4);}
+  50%   {transform: translateY(30%) scale(0.6);}
+  75%   {transform: translateY(40%) scale(0.8);}
+  100%   {transform: translateY(50%) scale(1);}
+
+}
+
+@keyframes leftright {
+  0%   {left: 70%;}
+  25%   {left: 50%;}
+  50%   {left: 30%;}
+  75%   {left: 50%;}
+  100%   {left: 70%;}
+
+}
+
+@keyframes shake {
+  0%   {transform: scale(1);}
+  25%   {transform: scale(0.6);}
+  50%   {transform: scale(1);}
+  75%   {transform: scale(0.6);}
+  100%   {transform: scale(1);}
+
+}
+
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(-100%, -50%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+
+/* ############################# */
+/* home section style */
+/* ############################# */
+.home_section{
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+.home_section-logo{
+  position: absolute;
+  width: 15%;
+  left: 15%;
+  top: 5%;
+}
+
+.home_section-text{
+  position: absolute;
+  width: 25%;
+  top: 50%;
+  left: 15%;
+  transform: translateY(-50%);
+  animation-name: slideInLeft;
+  animation-duration: 2s;
+
+}
+
+.home_section-image{
+  position: absolute;
+  width: 100%;
+  left: -50%;
+  top: -12%;
+}
+
+.home_section-image1{
+  position: absolute;
+  width: 70%;
+  right: -10%;
+  top: -20%;
+  z-index: -1;
+}
+
+.home_section-circle{
+  width: 120px;
+  height: 120px;
+  background: var(--theme-color);
+  position: absolute;
+  border-radius: 50%;
+  left: 70%;
+  bottom: 20%;
+  
+}
+
+.home_section-text h1{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 3.5em;
+  line-height: 1em;
+  margin-bottom: 5px;
+}
+
+.home_section-text p{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.home_section-text a{
+  background: var(--btn-color);
+  display: block;
+  width: 65%;
+  padding: 15px;
+  text-align: center;
+  color: white;
+  margin-top: 5px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+.inner_link{
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  font-size: 12px;
+  position: absolute;
+  left: 70%;
+  bottom: 10%;
+}
+
+.inner_link::after {
+  content: "";
+  width: 100px;
+  height: 1px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 110%;
+}
+
+/* ############################# */
+/* end of home section style */
+/* ############################# */
+
+
+/* ############################# */
+/* mission section style */
+/* ############################# */
+
+.mission_section{
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url(../Images/homeBG1.png);
+  background-size: 51%;
+  background-position: -45% 0%;
+  background-repeat: no-repeat;
+}
+
+.mission_section-logo{
+  position: absolute;
+  width: 15%;
+  left: 15%;
+  top: 5%;
+}
+
+.mission_section-text{
+  position: absolute;
+  width: 25%;
+  top: 50%;
+  left: 15%;
+  transform: translateY(-50%);
+
+  /* visibility: hidden; */
+}
+
+.mission_section-text h1{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 3.5em;
+  line-height: 1em;
+  margin-bottom: 5px;
+}
+
+.mission_section-text p{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.mission_section-image{
+  position: absolute;
+  width: 30%;
+  right: 10%;
+  /* top: 50%; */
+  transform: translateY(-50%);
+  animation-name: jump;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.mission_section-image1{
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  transform: rotate(-60deg);
+  top: 65%;
+  left: 5%;
+}
+
+.mission_section-circle{
+  width: 120px;
+  height: 120px;
+  background: var(--theme-color);
+  position: absolute;
+  border-radius: 50%;
+  left: 10%;
+  bottom: 10%;
+}
+
+.inner_link-mission{
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  font-size: 12px;
+  position: absolute;
+  left: 70%;
+  bottom: 10%;
+}
+
+.inner_link-mission::after {
+  content: "";
+  width: 100px;
+  height: 1px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 110%;
+}
+
+/* ############################# */
+/* end of mission section style */
+/* ############################# */
+
+
+/* ############################# */
+/* service section style */
+/* ############################# */
+
+.service_section{
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: url(../Images/serviceBG.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: -40% 0%;
+}
+
+.service_section-logo{
+  position: absolute;
+  width: 15%;
+  left: 15%;
+  top: 5%;
+}
+
+.service_section-image{
+  position: absolute;
+  width: 25%;
+  right: 0;
+  top: 15%;
+}
+
+.service_section-icon{
+  position: absolute;
+  top: 25%;
+  right: 20%;
+  font-size: 1.5em;
+}
+
+.service_section-box{
+  position: absolute;
+  width: 80%;
+  /* height: 75vh; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.service_section-box h1{
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  padding: var(--margin);
+}
+.service_section-container{
+  /* overflow: hidden; */
+}
+
+.service_section-item{
+  width: 25%;
+  display: inline-block;
+  /* float: left; */
+  text-align: center;
+  min-height: 40vh;
+  /* border: 2px solid red; */
+  transition: all 2s;
+  vertical-align: bottom;
+
+}
+
+.service_section-item:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.service_section-item > div{
+  min-height: 16vh;
+}
+
+.service_section-item img{
+  width: 40%;
+
+}
+
+.service_section-item h2{
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: var(--padding);
+}
+
+.service_section-item p{
+
+  font-family: 'Montserrat', sans-serif;
+  padding: var(--padding);
+  font-size: 1em;
+
+}
+
+.service_section-circle{
+  width: 80px;
+  height: 80px;
+  background: #fef334;
+  position: absolute;
+  border-radius: 50%;
+  left: 10%;
+  bottom: 10%;
+  animation-name: shake;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.inner_link-service{
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  font-size: 12px;
+  position: absolute;
+  left: 70%;
+  bottom: 10%;
+}
+
+.inner_link-service::after {
+  content: "";
+  width: 100px;
+  height: 1px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 110%;
+}
+
+/* ############################# */
+/* end of service section style */
+/* ############################# */
+
+
+/* ############################# */
+/* contact section style */
+/* ############################# */
+
+.contact_section{
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: url(../Images/contactBG1.png);
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+.contact_section-logo{
+  position: absolute;
+  width: 15%;
+  left: 15%;
+  top: 5%;
+}
+
+.contact_section-box{
+  position: absolute;
+  background: url(../Images/contactBG.png);
+  background-size: cover;
+  padding: var(--margin);
+  width: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.contact_section-box h2{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.contact_section-form{
+  /* border: 2px solid red; */
+  width: 40%;
+}
+
+input,textarea{
+  display: block;
+  width: 100%;
+  background: transparent;
+    font-size: 1em;
+    padding: 10px;
+    margin-top: 10px;
+    border-color: gray;
+    border-radius: 8px;
+}
+
+input:focus, textarea:focus{
+  border-color: var(--theme-color);
+}
+
+.contact_section-form a{
+  background: var(--btn-color);
+  display: block;
+  width: 55%;
+  padding: 15px;
+  text-align: center;
+  color: white;
+  margin-top: 10px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+.contact_section-image{
+  position: absolute;
+  width: 45%;
+  right: 5%;
+  top: 10%;
+  z-index: 100;
+}
+
+.contact_section-image1{
+  position: absolute;
+  width: 45%;
+  right: 16%;
+    top: 28%;
+    z-index: 98;
+    animation-name: blink;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+.social{
+  margin-top: var(--padding);
+  text-align: center;
+}
+
+/* ############################# */
+/* end of contact section style */
+/* ############################# */

@@ -1,0 +1,163 @@
+@media (max-width: 767px) {
+
+  body{
+    background: var(--main-bg-color);
+    font-size: 16px;
+    color: white;
+  }
+
+
+  .home_section-text, .mission_section-text{
+    width: 70%;
+  }
+
+  .home_section-logo {
+    position: absolute;
+    width: 50%;
+    left: 15%;
+    top: 5%;
+  }
+
+  .home_section-image {
+    position: absolute;
+    width: 131%;
+    left: -45%;
+    top: 29%;
+  }
+
+  .mission_section-image{
+    top: 25%;
+  }
+
+  .contact_section-form{
+    width: 100%;
+  }
+
+  .contact_section-box{
+    width: 85%;
+    padding: 10px;
+  }
+
+  .service_section-box{
+    width: 90%;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .service_section-box h1 {
+    padding: 10px;
+  }
+
+  .service_section-item > div {
+    min-height: 0;
+  }
+  .service_section-item{
+    width: 100%;
+    min-height: 0;
+    margin-top: 15px;
+  }
+  .service_section-item img {
+    width: 20%;
+  }
+
+  .service_section-item p{
+    /* display: none; */
+    padding: 5px;
+  }
+
+  .service_section-item h2{
+    padding: 5px;
+  }
+
+  
+  .contact_section-image1, .mission_section-logo, .service_section-logo, .contact_section-logo,
+  .service_section-circle,.service_section-icon{
+    display: none;
+  }
+
+
+}
+@media (min-width: 768px) and (max-width: 991px){
+  body{
+    background: var(--main-bg-color);
+    font-size: 16px;
+    color: white;
+  }
+
+
+  .home_section-text, .mission_section-text{
+    width: 70%;
+  }
+
+  .home_section-logo {
+    position: absolute;
+    width: 50%;
+    left: 15%;
+    top: 5%;
+  }
+
+  .home_section-image {
+    position: absolute;
+    width: 131%;
+    left: -45%;
+    top: 29%;
+  }
+
+  .mission_section-image{
+    top: 25%;
+  }
+
+  .contact_section-form{
+    width: 100%;
+  }
+
+  .contact_section-box{
+    width: 85%;
+    padding: 10px;
+  }
+
+  .service_section-box{
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .service_section{
+    background-position: bottom;
+  }
+
+  .service_section-box h1 {
+    padding: 10px;
+  }
+
+  .service_section-item > div {
+    min-height: 0;
+  }
+  .service_section-item{
+    width: 50%;
+    min-height: 0;
+    margin-top: 15px;
+  }
+  .service_section-item img {
+    width: 20%;
+  }
+
+  .service_section-item p{
+    /* display: none; */
+    padding: 5px;
+  }
+
+  .service_section-item h2{
+    padding: 5px;
+  }
+
+
+  .contact_section-image1, .mission_section-logo, .service_section-logo, .contact_section-logo,
+  .service_section-circle,.service_section-icon{
+    display: none;
+  }
+}
+/* @media (min-width: 992px) and (max-width: 1199px) {}
+@media (min-width: 1200px) {} */
